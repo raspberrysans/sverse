@@ -22,6 +22,11 @@ export default withBundleAnalyzer({
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
 
+  // Disable Turbopack and use webpack due to custom webpack configuration
+  experimental: {
+    turbopack: false
+  },
+
   webpack: (config, _context) => {
     // Workaround for ensuring that `react` and `react-dom` resolve correctly
     // when using a locally-linked version of `react-notion-x`.

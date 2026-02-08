@@ -19,7 +19,7 @@ export default siteConfig({
   github: 'raspberrysans',
   linkedin: 'sans-bhatia-41818a212',
   newsletter: 'https://medium.com/@sansverse', // optional newsletter URL
-  youtube: 'https://www.youtube.com/@sansxverse', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  youtube: '@sansxverse', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults

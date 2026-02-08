@@ -15,6 +15,7 @@ import {
 import { getTweetsMap } from './get-tweets'
 import { notion } from './notion-api'
 import { getPreviewImageMap } from './preview-images'
+import { sanitizeRecordMap } from './sanitize-record-map'
 
 const getNavigationLinkPages = pMemoize(
   async (): Promise<ExtendedRecordMap[]> => {
@@ -66,6 +67,9 @@ export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
   }
 
   await getTweetsMap(recordMap)
+
+  // Sanitize the record map to remove blocks with invalid data
+  recordMap = sanitizeRecordMap(recordMap)
 
   return recordMap
 }

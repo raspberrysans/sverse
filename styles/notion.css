@@ -12,6 +12,10 @@
   --notion-header-height: 54px;
 }
 
+.notion-frame {
+  padding: 0;
+}
+
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
   line-height: 1.65;
@@ -20,6 +24,18 @@
 .index-page,
 .tags-page {
   --notion-max-width: 900px;
+}
+
+.tags-page .notion-collection-header {
+  display: none;
+}
+
+.tags-page .notion-gallery {
+  padding-top: 2em;
+}
+
+.tags-page .notion-gallery-grid {
+  padding-top: 4em;
 }
 
 .tags-page .notion-collection-header {
@@ -55,6 +71,7 @@
 .notion-header .notion-nav-header {
   max-width: 1100px;
   margin: 0 auto;
+  overflow-x: auto;
 }
 
 .notion-nav-header-rhs {
@@ -208,6 +225,14 @@
 
 .notion-page-cover-wrapper {
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+}
+
+.notion-page-cover-hero {
+  cursor: grab;
+}
+
+.notion-page-cover-hero:active {
+  cursor: grabbing;
 }
 
 .notion-page-cover-hero {
@@ -375,9 +400,22 @@
   overflow: visible !important;
 }
 
+.notion-row {
+  overflow: unset;
+}
+
+.notion-block-f382a57807bc40779860eb079d0144f2 img.medium-zoom-image {
+  border-radius: 8px;
+  box-shadow: 4px 4px 24px rgb(0 0 0 / 21%);
+}
+.notion-block-f382a57807bc40779860eb079d0144f2 span {
+  overflow: visible !important;
+}
+
 /* if you don't want rounded page icon images, remove this */
 .notion-page-icon-hero.notion-page-icon-image {
   border-radius: 50%;
+  box-shadow: 4px 4px 24px 0 rgb(0 0 0 / 21%);
   box-shadow: 4px 4px 24px 0 rgb(0 0 0 / 21%);
 }
 .notion-page-icon-hero.notion-page-icon-image span,
@@ -393,7 +431,7 @@
 .dark-mode .notion-header {
   background: transparent;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 /* Workaround for Firefox not supporting backdrop-filter yet */

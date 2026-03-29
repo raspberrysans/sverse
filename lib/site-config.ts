@@ -1,8 +1,8 @@
-import * as types from './types'
+import type * as types from './types'
 
 export interface SiteConfig {
   rootNotionPageId: string
-  rootNotionSpaceId?: string
+  rootNotionSpaceId?: string | null
 
   name: string
   domain: string
@@ -13,7 +13,10 @@ export interface SiteConfig {
   twitter?: string
   github?: string
   linkedin?: string
+  newsletter?: string
+  youtube?: string
   zhihu?: string
+  mastodon?: string
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
@@ -25,8 +28,8 @@ export interface SiteConfig {
   isSearchEnabled?: boolean
 
   includeNotionIdInUrls?: boolean
-  pageUrlOverrides?: types.PageUrlOverridesMap
-  pageUrlAdditions?: types.PageUrlOverridesMap
+  pageUrlOverrides?: types.PageUrlOverridesMap | null
+  pageUrlAdditions?: types.PageUrlOverridesMap | null
 
   navigationStyle?: types.NavigationStyle
   navigationLinks?: Array<NavigationLink>
